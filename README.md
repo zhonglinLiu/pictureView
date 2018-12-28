@@ -50,6 +50,6 @@
 
 图片切换后执行
 
-##update(data)
+## update(data)
 
 更新dom
