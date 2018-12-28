@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+
+<style type="text/css">
+
+</style>
+<link rel="stylesheet" type="text/css" href="index.css">
+<body>
+<style type="text/css">
+
+#pics-thumbs .first {
+    position: relative;
+}
+#pics-thumbs .first p {
+    position: absolute;width:100%;
+}
+#pics-thumbs .first span {
+    display: inline-block;width:100%;text-align: center;color:#fff;
+}
+</style>
+
+<div id="wrapper">
+ <div id="content">
+   <!--大图预览区-->
+   <div id="view" >
+        <img src="a.webp" alt=""/>
+   </div>
+   <!--缩略图-->
+   <div id="thumbs">
+     <!--左箭头导航-->
+     <div id="nav-left-thumbs"><</div>
+     <div id="pics-thumbs">
+        <div class="image first">
+            <p><span>test</span></p>
+            <img src="a.webp" origin-src="a.webp">
+        </div>
+        <div class="image">
+            <img src="a.webp" origin-src="a.webp">
+        </div>
+        <div class="image">
+            <img src="b.webp" origin-src="b.webp">
+        </div>
+        <div class="image">
+            <img src="a.webp" origin-src="a.webp">
+        </div>
+        <div class="image">
+            <img src="b.webp" origin-src="b.webp">
+        </div>
+        <div class="image">
+            <img src="a.webp" origin-src="a.webp">
+        </div>
+        <div class="image">
+            <img src="b.webp" origin-src="b.webp">
+        </div>
+        <div class="image">
+            <img src="a.webp" origin-src="a.webp">
+        </div>
+        <div class="image">
+            <img src="b.webp" origin-src="b.webp">
+        </div>
+        <div class="image">
+            <img src="a.webp" origin-src="a.webp">
+        </div>
+        <div class="image">
+            <img src="c.webp" origin-src="c.webp">
+        </div>
+        <div class="image">
+            <img src="a.webp" origin-src="a.webp">
+        </div>
+        <div class="image">
+            <img src="c.webp" origin-src="c.webp">
+        </div>
+     </div>
+     <!--右箭头导航-->
+     <div id="nav-right-thumbs">></div>
+   </div>
+ </div>
+</div>
+
+</body>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="zoom-slideshow/js/zoom-slideshow.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    Wheel.init({
+        playZoom: 1, // 显示图片的缩放比例
+        playElement: '#view', // 显示图片父元素
+        barElement: '#pics-thumbs', //底部图片列表父元素
+        leftElement: '#nav-left-thumbs', //向左翻页
+        rightElement: '#nav-right-thumbs', //向右翻页
+        moveCallback: function(index,imgs) {
+            console.log(index)
+            console.log(imgs)
+        }
+    })
+}
+    
+</script>
+</html>
