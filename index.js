@@ -122,6 +122,7 @@
         this.barElement.children().each(function (index,ele) {
             $(ele).unbind();
         })
+        $(this.options.playElement).unbind();
         $(this.options.leftElement).unbind();
         $(this.options.rightElement).unbind();
         this.init();
